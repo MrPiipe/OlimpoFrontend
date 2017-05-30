@@ -8,10 +8,13 @@
  * Controller of the olimpoApp
  */
 angular.module('olimpoApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function (artistService) {
+    var vm = this;
+    artistService.getAllArtist().then(function(result){
+      vm.artists = result.data;
+    });
+
+    vm.showDisplayName = function(artist){
+      console.log(artist.displayName);
+    }; 
   });
