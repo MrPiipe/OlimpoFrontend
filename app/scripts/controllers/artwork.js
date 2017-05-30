@@ -13,4 +13,4 @@ angular.module('olimpoApp')
     artworkService.getAllArtwork().then(function(result){
       vm.artwork = result.data;
     });
-  });
+});

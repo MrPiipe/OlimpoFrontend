@@ -5,9 +5,9 @@
     <input type="text" class="form-control" placeholder="" ng-model="name">
     <h4>Apellido:</h4>
     <input type="text" class="form-control" placeholder="" ng-model="lastName">
-    <h4>Telefono:</h4>
+    <h4>Teléfono:</h4>
     <input type="text" class="form-control" placeholder="" ng-model="phone">
-    <h4>Pais:</h4>
+    <h4>País:</h4>
     <input type="text" class="form-control" placeholder="" ng-model="country">
     <h4>Usuario:</h4>
     <input type="text" class="form-control" placeholder="" ng-model="user">
@@ -21,11 +21,11 @@
         He leído y acepto los términos y condiciones.
     </div>
     <div class="checkbox">
-        <input type="checkbox" id="role">
+        <input type="checkbox" ng-model="role">
         Deseo crear una cuenta de artista.
     </div>
     <br>
-    <a class="btn btn-lg btn-success" ng-click="vm.getValues(email,name,lastName,phone,country,user,password)">
+    <a class="btn btn-lg btn-success" ng-click="vm.getValues(email,user,password,role,name,lastName,phone,country)">
         Registrar
     </a>    
 </div>

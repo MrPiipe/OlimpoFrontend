@@ -1,0 +1,14 @@
+<div class=container>
+    <h1>Nueva Obra</h1>
+    <br>
+    <h4>Nombre de la obra:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="name">
+    <h4>Descripción:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="description">
+     <h4>URL obra:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="url">
+    <br>
+    <a class="btn btn-lg btn-success" ng-click="vm.getValues(name, description, url)" ng-href="#!/artwork">
+        Registrar
+    </a>    
+</div>

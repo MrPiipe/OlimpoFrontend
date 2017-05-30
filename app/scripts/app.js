@@ -54,6 +54,11 @@ angular
         controller: 'ArtistCtrl',
         controllerAs: 'artist'
       })
+      .when('/newartwork', {
+        templateUrl: 'views/newartwork.html',
+        controller: 'NewartworkCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
