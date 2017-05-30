@@ -29,6 +29,16 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'vm'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/artwork', {
+        templateUrl: 'views/artwork.html',
+        controller: 'ArtworkCtrl',
+        controllerAs: 'artwork'
+      })
       .otherwise({
         redirectTo: '/'
       });
