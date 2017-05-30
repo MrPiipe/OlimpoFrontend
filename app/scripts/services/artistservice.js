@@ -10,7 +10,7 @@
 angular.module('olimpoApp')
   .service('artistService', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    this.getAllArtist= function(){
+    this.getAllArtist = function(){
       return $http.get('http://localhost:8080/artist');
     };
   });

@@ -1,0 +1,31 @@
+<div class=container>
+    <h4>Email:</h4>
+    <input type="email" class="form-control" placeholder="alguien@ejemplo.com" ng-model="email">
+    <h4>Nombre:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="name">
+    <h4>Apellido:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="lastName">
+    <h4>Telefono:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="phone">
+    <h4>Pais:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="country">
+    <h4>Usuario:</h4>
+    <input type="text" class="form-control" placeholder="" ng-model="user">
+    <h4>Contraseña:</h4>
+    <input type="password" class="form-control" placeholder="" ng-model="password">
+    <h4>Confirmar Contraseña:</h4>
+    <input type="password" class="form-control" placeholder="" id="valeverganonosimporta">
+    <br>
+    <div class="checkbox">
+        <input type="checkbox">
+        He leído y acepto los términos y condiciones.
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="role">
+        Deseo crear una cuenta de artista.
+    </div>
+    <br>
+    <a class="btn btn-lg btn-success" ng-click="vm.getValues(email,name,lastName,phone,country,user,password)">
+        Registrar
+    </a>    
+</div>

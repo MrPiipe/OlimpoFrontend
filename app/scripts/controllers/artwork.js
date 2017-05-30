@@ -8,10 +8,9 @@
  * Controller of the olimpoApp
  */
 angular.module('olimpoApp')
-  .controller('ArtworkCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ArtworkCtrl', function (artworkService) {
+    var vm = this;
+    artworkService.getAllArtwork().then(function(result){
+      vm.artwork = result.data;
+    });
   });
