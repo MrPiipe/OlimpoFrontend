@@ -39,6 +39,16 @@ angular
         controller: 'ArtworkCtrl',
         controllerAs: 'artwork'
       })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
+      .when('/artist', {
+        templateUrl: 'views/artist.html',
+        controller: 'ArtistCtrl',
+        controllerAs: 'artist'
+      })
       .otherwise({
         redirectTo: '/'
       });
