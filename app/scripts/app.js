@@ -37,7 +37,12 @@ angular
       .when('/artwork', {
         templateUrl: 'views/artwork.html',
         controller: 'ArtworkCtrl',
-        controllerAs: 'artwork'
+        controllerAs: 'vm'
+      })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'vm'
       })
       .when('/profile', {
         templateUrl: 'views/profile.html',
