@@ -59,6 +59,16 @@ angular
         controller: 'NewartworkCtrl',
         controllerAs: 'vm'
       })
+      .when('/registerArtist', {
+        templateUrl: 'views/registerartist.html',
+        controller: 'RegisterartistCtrl',
+        controllerAs: 'registerArtist'
+      })
+      .when('/registerUser', {
+        templateUrl: 'views/registeruser.html',
+        controller: 'RegisteruserCtrl',
+        controllerAs: 'registerUser'
+      })
       .otherwise({
         redirectTo: '/'
       });

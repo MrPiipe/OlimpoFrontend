@@ -1,20 +1,20 @@
 <div class=container>
     <h4>Email:</h4>
-    <input type="email" class="form-control" placeholder="alguien@ejemplo.com" ng-model="email">
+    <input type="email" class="form-control" placeholder="alguien@ejemplo.com" ng-model="vm.register.loginInformation.email">
     <h4>Nombre:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="name">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.name">
     <h4>Apellido:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="lastName">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.lastName">
     <h4>Teléfono:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="phone">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.phone">
     <h4>País:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="country">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.country">
     <h4>Usuario:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="user">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.register.loginInformation.user">
     <h4>Contraseña:</h4>
-    <input type="password" class="form-control" placeholder="" ng-model="password">
+    <input type="password" class="form-control" placeholder="" ng-model="vm.register.loginInformation.password">
     <h4>Confirmar Contraseña:</h4>
-    <input type="password" class="form-control" placeholder="" id="valeverganonosimporta">
+    <input type="password" class="form-control" placeholder="" ng-model="vm.register.valeverganonosimporta">
     <br>
     <div class="checkbox">
         <input type="checkbox">
@@ -25,7 +25,10 @@
         Deseo crear una cuenta de artista.
     </div>
     <br>
-    <a class="btn btn-lg btn-success" ng-click="vm.getValues(email,user,password,role,name,lastName,phone,country)">
+    <a class="btn btn-lg btn-success" ng-click="vm.getValues()">
         Registrar
-    </a>    
+    </a>
+    <pre>
+        {{vm.register|json}}
+    </pre>
 </div>
