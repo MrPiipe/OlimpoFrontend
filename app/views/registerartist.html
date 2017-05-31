@@ -1,14 +1,24 @@
 <div class=container>
     <h4>Email:</h4>
     <input type="email" class="form-control" placeholder="alguien@ejemplo.com" ng-model="vm.register.loginInformation.email">
-    <h4>Nombre:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.name">
-    <h4>Apellido:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.lastName">
-    <h4>Teléfono:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.phone">
-    <h4>País:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="vm.register.contacts.country">
+    <div ng-repeat="contact in vm.register.contacts">
+        <h4>Nombre:</h4>
+        <input type="text" class="form-control" placeholder="" ng-model="contact.name">
+        <h4>Apellido:</h4>
+        <input type="text" class="form-control" placeholder="" ng-model="contact.lastName">
+        <h4>Teléfono:</h4>
+        <input type="text" class="form-control" placeholder="" ng-model="contact.phone">
+        <h4>País:</h4>
+        <input type="text" class="form-control" placeholder="" ng-model="contact.country">
+        <br>
+        <div class="clearfix">
+            <div class="pull-right">
+                <button class="btn btn-danger" ng-click="vm.removeInput($index)"><span class="glyphicon glyphicon-trash"></span> Eliminar un Contacto</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <button class="btn btn-success" ng-click="vm.addInput()"><span class="glyphicon glyphicon-plus"></span> Agregar un Nuevo Contacto</button>
     <h4>Usuario:</h4>
     <input type="text" class="form-control" placeholder="" ng-model="vm.register.loginInformation.user">
     <h4>Contraseña:</h4>

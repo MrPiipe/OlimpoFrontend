@@ -13,7 +13,7 @@ angular.module('olimpoApp')
     vm.register = {};
 
     vm.getUserValues = function() {
-      vm.register.role = "user";
+      vm.register.role = 'USER';
       userService.postArtist(vm.register).then(function() {});
     };
   });

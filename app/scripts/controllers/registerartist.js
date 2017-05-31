@@ -10,10 +10,22 @@
 angular.module('olimpoApp')
   .controller('RegisterartistCtrl', function(artistService) {
     var vm = this;
-    vm.register = {};
+    vm.register = {
+      contacts: [{
+
+      }]
+    };
 
     vm.getArtistValues = function() {
-      vm.register.role = "user";
+      vm.register.role = 'ARTIST';
       artistService.postArtist(vm.register).then(function() {});
+    };
+
+    vm.addInput = function() {
+      vm.register.contacts.push({});
+    };
+
+    vm.removeInput = function(index) {
+      vm.register.contacts.splice(index, 1);
     };
   });
