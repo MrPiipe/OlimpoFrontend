@@ -29,6 +29,36 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'vm'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/artwork', {
+        templateUrl: 'views/artwork.html',
+        controller: 'ArtworkCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
+      .when('/artist', {
+        templateUrl: 'views/artist.html',
+        controller: 'ArtistCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/newartwork', {
+        templateUrl: 'views/newartwork.html',
+        controller: 'NewartworkCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
