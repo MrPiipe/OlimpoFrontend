@@ -2,13 +2,16 @@
     <h1>Nueva Obra</h1>
     <br>
     <h4>Nombre de la obra:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="name">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.artwork.name">
     <h4>Descripción:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="description">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.artwork.description">
      <h4>URL obra:</h4>
-    <input type="text" class="form-control" placeholder="" ng-model="url">
+    <input type="text" class="form-control" placeholder="" ng-model="vm.artwork.url">
     <br>
-    <a class="btn btn-lg btn-success" ng-click="vm.getValues(name, description, url)" ng-href="#!/artwork">
+    <a class="btn btn-lg btn-success" ng-click="vm.getValues()" ng-href="#!/artwork">
         Registrar
-    </a>    
+    </a>
+    <pre>
+        {{vm.artwork|json}}
+    </pre>    
 </div>

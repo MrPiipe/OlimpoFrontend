@@ -10,16 +10,11 @@
 angular.module('olimpoApp')
   .controller('NewartworkCtrl', function (artworkService) {
      var vm = this;
-     var body = {};
+     vm.artwork = {};
 
-    vm.getValues = function(name, description, url) {
-      console.log("voy a comtar el siguiente body:");
-      body = {
-               "name": name,
-               "description": description,
-               "url": url
-              };
-        console.log(body);
-        artworkService.postArtwork(body).then(function(result){});
+    vm.getValues = function() {
+      console.log("voy a enviar el siguiente body:");
+        console.log(vm.artwork);
+        artworkService.postArtwork(vm.artwork).then(function(result){});
     };
   });
