@@ -13,4 +13,8 @@ angular.module('olimpoApp')
     this.getAllArtwork = function(){
       return $http.get('http://localhost:8080/artwork');
     };
+
+    this.postArtwork = function(body){
+      return $http.post('http://localhost:8080/artwork',body);
+    };
   });

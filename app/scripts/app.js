@@ -52,7 +52,12 @@ angular
       .when('/artist', {
         templateUrl: 'views/artist.html',
         controller: 'ArtistCtrl',
-        controllerAs: 'artist'
+        controllerAs: 'vm'
+      })
+      .when('/newartwork', {
+        templateUrl: 'views/newartwork.html',
+        controller: 'NewartworkCtrl',
+        controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'
