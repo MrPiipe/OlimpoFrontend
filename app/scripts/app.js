@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -33,11 +33,6 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
-      })
-      .when('/artwork', {
-        templateUrl: 'views/artwork.html',
-        controller: 'ArtworkCtrl',
-        controllerAs: 'vm'
       })
       .when('/register', {
         templateUrl: 'views/register.html',
@@ -57,6 +52,16 @@ angular
       .when('/newartwork', {
         templateUrl: 'views/newartwork.html',
         controller: 'NewartworkCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/registerartist', {
+        templateUrl: 'views/registerartist.html',
+        controller: 'RegisterartistCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/registeruser', {
+        templateUrl: 'views/registeruser.html',
+        controller: 'RegisteruserCtrl',
         controllerAs: 'vm'
       })
       .otherwise({
