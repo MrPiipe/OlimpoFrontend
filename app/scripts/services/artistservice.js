@@ -8,14 +8,14 @@
  * Service in the olimpoApp.
  */
 angular.module('olimpoApp')
-  .service('artistService', function ($http) {
+  .service('artistService', function($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     var vm = this;
-    this.getAllArtist = function(){
+    vm.getAllArtist = function() {
       return $http.get('http://localhost:8080/artist');
     };
 
-    this.postArtist = function(body){
-      return $http.post('http://localhost:8080/artist',body);
+    vm.postArtist = function(body) {
+      return $http.post('http://localhost:8080/artist', body);
     };
   });

@@ -13,6 +13,6 @@ angular.module('olimpoApp')
     vm.artwork = {};
 
     vm.getValues = function() {
-      artworkService.postArtwork(vm.artwork).then(function(result) {});
+      artworkService.postArtwork(vm.artwork).then(function() {});
     };
   });
